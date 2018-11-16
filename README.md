@@ -30,5 +30,5 @@ In case of different number of rows in two files script finds first cells with d
     >`pip install -r requirements.txt`
     
 ##### 4. Run service:
-Run beeing in project path.
+- Run beeing in project path.
     >`python3 comparison.py file_1.xls file_2.xls`

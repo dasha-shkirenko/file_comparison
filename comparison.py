@@ -12,6 +12,14 @@ def compare_reports(f1, f2):
     sheet2 = file2.sheet_by_index(0)
 
     for rownum in range(min(sheet1.nrows, sheet2.nrows)):
+        if sheet1.ncols != sheet2.ncols:
+            print("Number of columns is different. \n File {} has {} columns \n File {} has {} columns".format(
+                f1,
+                sheet1.ncols,
+                f2,
+                sheet2.ncols,
+            ))
+            break
         if rownum < sheet1.nrows:
             row_rb1 = sheet1.row_values(rownum)
             row_rb2 = sheet2.row_values(rownum)
